@@ -37,6 +37,8 @@ public class BrandManager implements BrandService {
 		}
 		return brandsResponse;
 	}
+	
+	
 
 	@Override
 	public void add(CreateBrandRequest createBrandRequest) {
@@ -44,6 +46,12 @@ public class BrandManager implements BrandService {
 		Brand brand = new Brand();
 		brand.setName(createBrandRequest.getName());
 		this.brandRepository.save(brand);
+	}
+
+	@Override
+	public void delete(int id) {
+		this.brandRepository.deleteById(id);
+		
 	}
 
 }

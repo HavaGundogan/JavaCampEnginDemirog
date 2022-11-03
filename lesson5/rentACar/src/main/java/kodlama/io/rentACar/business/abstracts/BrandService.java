@@ -10,4 +10,11 @@ public interface BrandService {
 	List<GetAllBrandsResponse> getAll();
 	
 	void add(CreateBrandRequest createBrandRequest);
+	
+	
+
+	void delete(int id);
+	
+	
+	
 }
