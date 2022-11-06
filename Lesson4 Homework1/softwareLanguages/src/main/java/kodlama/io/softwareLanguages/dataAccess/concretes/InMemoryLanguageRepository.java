@@ -3,9 +3,12 @@ package kodlama.io.softwareLanguages.dataAccess.concretes;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import kodlama.io.softwareLanguages.dataAccess.abstracts.LanguageRepository;
 import kodlama.io.softwareLanguages.entities.concretes.Language;
 
+@Repository
 public class InMemoryLanguageRepository implements LanguageRepository {
 
 	private List<Language> languages;
